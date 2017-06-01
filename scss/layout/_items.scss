@@ -1,0 +1,70 @@
+/* ---- Content ---- */
+
+.items {
+	@include spacing($padding: 0 1em 2em, $width: 100%);
+	background-color: $white;
+
+	@media #{$brk-narrow} {
+		@include spacing($padding: 0 1.5em);
+		box-shadow: 0 -8px 10px -5px $shadow-color-box;
+	}
+
+	@media #{$brk-wide} {
+		@include spacing(0 auto, $width: 90%);
+		text-align: left;
+		box-shadow: 0 0 10px 5px $shadow-color-box;
+	}
+
+	h2 {
+		@include text(1em, $color: $text-color-dark);
+		@include spacing(0, 3.2em 0);
+		@extend %uppercased;
+
+		@media #{$brk-wide} {
+			text-align: center;
+		}
+	}
+
+	h3 {
+		@media #{$brk-wide} {
+			text-align: center;
+		}
+	}
+
+	p {
+		@media #{$brk-wide} {
+			text-align: center;
+		}
+	}
+}
+
+
+.item {
+	@include text($weight: 300, $color: $text-color-dark);
+	@include spacing($padding: 2em, $dir-p: bottom);
+
+	@media #{$brk-narrow} {
+		@include spacing(-4px, .5em .5em 2.5em, right, $width: 50%);
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	@media #{$brk-wide} {
+		@include spacing($width: 33.333%);
+	}
+
+	img {
+		@include spacing($width: 100%);
+	}
+
+	h3 {
+		@include text($weight: 400);
+		@include spacing($padding: .8em, $dir-p: top);
+	}
+
+	p {
+		@include text($l-height: 1.5em);
+		@include spacing(0 auto, $width: 90%);
+	}
+}
+

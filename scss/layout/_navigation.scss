@@ -1,0 +1,60 @@
+/* ---- Navigation ---- */
+
+.name {
+	@include text(1.6em, $color: $text-color-dark);
+	
+	@media #{$brk-narrow} {
+		@include spacing(1.5em, $dir-m: top);
+	}
+
+	@media #{$brk-wide} {
+		@include spacing(0);
+		float: left;
+	}
+}
+
+.main {
+	&-nav {
+		@include spacing(3em, $dir-m: bottom);
+
+		@media #{$brk-narrow} {
+			@include spacing(20px, $dir-m: bottom);			
+			display: inline-block;
+		}
+
+		@media #{$brk-wide} {
+			float: right;
+		}
+	}
+
+	&-nav li {
+		@extend %centered;
+		@include spacing(5px 15px, 10px 0);
+		background: $white;
+
+		@media #{$brk-narrow} {
+			@include spacing(20px, $dir-m: bottom);
+			display: inline-block;
+			background: none;
+		}
+
+		@media #{$brk-wide} {
+			@include spacing(0, $dir-m: right);
+			@include spacing(30px, $dir-m: left);
+		}
+	}
+
+	&-nav a {
+		@include text($weight: bold, $color: $text-color-dark);
+		@extend %uppercased;
+		display: block;
+		
+		
+		&:hover {
+			@media #{$brk-narrow} {
+				@include text($color: $text-color-light);
+			}
+		}
+	}
+
+}

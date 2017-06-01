@@ -1,0 +1,38 @@
+/* ---- Contact ---- */
+
+#contact {
+	@include text($color: $text-color-light);
+	@include spacing($padding: 2em 1em 2em);
+
+	@media #{$brk-narrow} {
+		@include text(1.3em, $weight: 300);
+		@include spacing(0 auto, $width: 70%);
+	}
+
+	@media #{$brk-wide} {
+		@include spacing($width: 50%);
+	}
+
+	h2 {
+		@include text(1em, $color: $text-color-dark);
+		@include spacing($padding: 1em 0);
+		@extend %uppercased;
+
+		@media #{$brk-narrow} {
+			@include text(.8em);
+		}
+	}
+
+	p {
+		@include text($l-height: 1.5em, $weight: 300, $color: $text-color-light);
+	}
+}
+
+.phone {
+	@include spacing($padding: 1em 0);
+	@extend %phone-email;
+}
+
+.email {
+	@extend %phone-email;
+}

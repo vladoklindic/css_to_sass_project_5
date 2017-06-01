@@ -1,0 +1,46 @@
+/* ---- Introduction ---- */
+
+.info {
+	@include spacing(20px 0 40px, 0 1em, $width: 100%);
+	@extend %centered;
+	
+	@media #{$brk-narrow} {
+		@include spacing($padding: 0 2.5em, $width: 100%);
+	}
+
+	@media #{$brk-wide} {
+		@include spacing(0 auto, $padding: 2em, $dir-p: bottom, $width: 90%);
+	}
+
+	p {
+		@include text($l-height: 1.5em);
+		color: $text-color-light;
+	}
+}
+
+.intro {
+	@media #{$brk-narrow} {
+		@include text(1.3em, $weight: 300);
+		@include spacing(-5px, 25px, top, right, 60%);
+		float: left;
+		text-align: left;
+	}
+}
+
+.profile-photo {
+	@include spacing(0 auto 30px, $width: 70%);
+	background-color: $profile-pic-bkg;
+
+	@media #{$brk-narrow} {
+		@include spacing($width: 40%);
+		float: right;
+		box-shadow: 0 0 20px 3px $shadow-color-profile;
+	}
+
+	img {
+		@include spacing($padding: 1em, $width: 60%);
+		border-radius: 100%;
+		vertical-align: top;
+	}
+}
+

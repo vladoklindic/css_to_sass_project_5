@@ -1,0 +1,40 @@
+// Text
+
+@mixin text($size: null, $weight: null, $l-height: null, $color: null){
+	font-size: $size;
+	line-height: $l-height;
+	font-weight: $weight;
+	color: $color;
+}
+
+// Margin, padding and width 
+
+@mixin spacing($margin: null, $padding: null, $dir-m: null, $dir-p: null, $width: null){
+	
+	@if ($dir-m == 'top') {
+		margin-top: $margin;
+	} @else if ($dir-m == 'right') {
+		margin-right: $margin;
+	} @else if ($dir-m == 'bottom') {
+		margin-bottom: $margin;
+	} @else if ($dir-m == 'left') {
+		margin-left: $margin;
+	}	@else {
+		margin: $margin;
+	}	
+
+	@if ($dir-p == 'top') {
+		padding-top: $padding;
+	} @else if ($dir-p == 'right') {
+		padding-right: $padding;
+	} @else if ($dir-p == 'bottom') {
+		padding-bottom: $padding;
+	} @else if ($dir-p == 'left') {
+		padding-left: $padding;
+	}	@else {
+		padding: $padding;
+	}	
+
+	width: $width;
+
+}

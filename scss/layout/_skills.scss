@@ -1,0 +1,52 @@
+/* ---- Skills ---- */
+
+.skills {
+	@include text($l-height: 1.4, $color: $text-color-dark);
+	@include spacing(1em, 1.5em 0 2.5em, $dir-m: top);
+	background: $white;
+
+	@media #{$brk-narrow} {
+		box-shadow: 0 8px 10px  -5px $shadow-color-box;
+	}
+
+	@media #{$brk-wide} {
+		@include spacing(2em auto 0, $width: 90%);
+		box-shadow: 0 0 10px 5px $shadow-color-box;
+	}
+
+	ul {
+		@media #{$brk-narrow} {
+			display: inline-block;
+		}
+	}
+
+	h2 {
+		@include text(1em);
+		@include spacing($padding: 1.5em, $dir-p: bottom);
+		@extend %uppercased;
+	}
+
+	li {
+		@include text($color: $text-color-light);
+
+		@media #{$brk-narrow} {
+			@include spacing(10px, 10px, right, right);
+			display: inline-block;
+			border-right: 2px solid $text-color-dark;
+		}
+
+		&:last-child {
+			@media #{$brk-narrow}	{
+				border-right: none;
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+

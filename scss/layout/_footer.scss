@@ -1,0 +1,54 @@
+/* ---- Footer ---- */
+
+footer {
+	@include text(.9em, $weight: bold, $color: $text-color-dark);
+	@include spacing(25px auto 25px, 1.5em 0 0, $width: 90%);
+	display: inline-block;
+	border-top: 1px solid $profile-pic-bkg;
+	text-align: left;
+	
+	@media #{$brk-wide} {
+		@include spacing(2.5em auto 0, $width: 85%);
+	}
+
+
+}
+
+.footer {
+	&-nav {
+		float: right;
+
+		@media #{$brk-narrow} {
+			@include spacing($padding: 2.5em, $dir-p: bottom);
+		}
+
+		@media #{$brk-wide} {
+			@include spacing($padding: 1.5em, $dir-p: bottom);
+		}
+	}
+
+	&-nav a {
+		@include text($color: $text-color-dark);
+	}
+} 
+
+
+
+.show {
+	@extend %uppercased;
+
+	@media #{$brk-narrow} {
+		display: none;
+	}
+}
+
+.hide {
+	display: none;
+
+	@media #{$brk-narrow} {
+		@include text(.9em);
+		@include spacing($padding: 1em, $dir-p: left);
+		display: inline-block;
+		text-transform: uppercase;
+	}
+}

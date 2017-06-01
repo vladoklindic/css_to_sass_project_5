@@ -1,0 +1,32 @@
+// Center text
+
+%centered {
+	text-align: center;		
+}
+
+// Uppercase text
+
+%uppercased {
+	text-transform: uppercase;
+}
+
+// Contact information - phone and email
+
+%phone-email {
+	display: block;
+	
+	a {
+		@include text($weight: bold, $color: $text-color-light);
+		@include spacing(1em, $dir-m: left);
+	}
+}
+
+// Clearfix
+
+%clearfix {
+	&::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}	
+}

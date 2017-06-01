@@ -1,0 +1,27 @@
+/* ================================= 
+  Base Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	@include text($color: $mine-shaft);
+	@include spacing(0, 0);
+	@extend %centered;
+	font-family: $font-stack-primary;
+	background: $body-bkg;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}

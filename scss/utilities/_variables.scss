@@ -1,0 +1,31 @@
+// Colors
+
+	// Descriptive color variables (for the names check 'name that color - chirag mehta') 
+
+$mine-shaft		: #222;
+$pampas				: #f5f5f0;
+$tundora			: #404040;
+$white				: #fff;
+$black				: #000;
+$grey					: #888;
+$moon-mist  	: #e0e0d1;
+
+	// Functional color variables
+
+$body-bkg							:	$pampas;
+$text-color-dark			: $tundora;
+$text-color-light 		: $grey;
+$profile-pic-bkg			: $moon-mist;
+$shadow-color-profile : rgba($black, .8);
+$shadow-color-box			: rgba($grey, .9);
+
+// Font stacks
+
+$font-stack-primary: 'Roboto', sans-serif;
+
+
+// Media query breakpoints
+
+$brk-narrow : '(min-width: 768px)';
+$brk-wide   : '(min-width: 1024px)';
+
